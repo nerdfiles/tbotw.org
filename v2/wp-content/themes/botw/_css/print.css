@@ -1,0 +1,3 @@
+/* PRINT.CSS */
+#topnav, #escape-info,#search, #mainnav_modes, #mainnav, #left_nav, #top-nav, a, #footer { display:none; }
+#main_content { width:100%; }

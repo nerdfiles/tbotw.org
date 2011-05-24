@@ -1,0 +1,2 @@
+[01-Feb-2011 14:54:08] PHP Fatal error:  Call to undefined function  get_header() in /home/p153j5mh/public_html/v2/wp-content/themes/botw/template-landing-page.php on line 9
+[01-Feb-2011 14:56:03] PHP Fatal error:  Call to undefined function  get_header() in /home/p153j5mh/public_html/v2/wp-content/themes/botw/template-landing-page.php on line 9
