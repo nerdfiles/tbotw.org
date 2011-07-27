@@ -357,7 +357,7 @@ body .buttonfixed {
   position: absolute; }
 
 body.home .buttonfixed {
-  right: 35px !important; }
+  right: 120px !important; }
 
 body .buttonfixed:hover {
   top: 85px !important; }

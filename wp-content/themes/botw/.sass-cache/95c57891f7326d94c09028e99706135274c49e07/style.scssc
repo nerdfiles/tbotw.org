@@ -1,8 +1,8 @@
 3.1.5 (Brainy Betty)
-36d80f769cbbfb0eee12436137cbf0f55b030e67
+1aaad3d7563e40939edfae91aad6ac83505a929b
 o:Sass::Tree::RootNode
 :
-@linei:@template"G /**
+@linei:@template"H /**
  * Theme Name: BOTWv1
  * Theme URI: http://thebridgeovertroubledwaters.com
  * Description: For AIR Houston
@@ -383,7 +383,7 @@ body .buttonfixed {
   right: 15px !important;
   top: 85px; 
   position: absolute; }
-body.home .buttonfixed { right: 35px !important; }
+body.home .buttonfixed { right: 120px !important; }
 
 body .buttonfixed:hover { top: 85px !important; }:@options{ :@has_childrenT:@children[;o:Sass::Tree::CommentNode;i:@silent0;@:@lines[ ;
 [ :
@@ -852,7 +852,7 @@ o;;iz;[o;#;iz;["buttonfixed;"@¹
 o;;i~;@;	T;i ;
 [o;;i~;;;@;i ;
 [ ;["
-right;o;;;;@;"35px !important;["body.home .buttonfixed;o;;i~;[o;;[o;;i~;[o; 	;i~;["	body;!0;"" o;#;i~;["	home;"@Ò
+right;o;;;;@;"120px !important;["body.home .buttonfixed;o;;i~;[o;;[o;;i~;[o; 	;i~;["	body;!0;"" o;#;i~;["	home;"@Ò
 ;"@Ò
 o;;i~;[o;#;i~;["buttonfixed;"@Ò
 ;"@Ò
