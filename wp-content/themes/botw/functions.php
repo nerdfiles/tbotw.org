@@ -107,8 +107,8 @@ function page_hero() {
     if (!is_page("Landing Page")) {
     ?>
     <div id="page-hero" class="grid_16" class="cushycms-wysiwyg" title="Site-wide Hotline">
-        <a href="http://www.unitedwayhouston.org/">
-            <img style="-webkit-box-shadow: 0 0 5px #333; position: absolute; right: 2.3em; bottom: .5em;" src="http://www.thebridgeovertroubledwaters.org/v2/wp-content/themes/botw/_img/united_way_logo.gif" alt="United Way of Greater Houston" width="96" height="60" class="" title="United Way of Greater Houston" />
+        <a href="http://www.unitedwayhouston.org/" class="uw-logo">
+            <img src="http://www.thebridgeovertroubledwaters.org/v2/wp-content/themes/botw/_img/united_way_logo.gif" alt="United Way of Greater Houston" width="96" height="60" class="" title="United Way of Greater Houston" />
         </a>
         <?php
             include_once("static-content/site-wide-hotline.html");
