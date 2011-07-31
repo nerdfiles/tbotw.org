@@ -83,7 +83,7 @@ if($post->post_parent) {
         </div>
             
          <div id="top-nav" class="grid_10 omega">
-		 <?php wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container_class' => 'menu', 'menu_class' => '', 'fallback_cb' => '' ) ); ?>
+		 <?php wp_nav_menu( array( 'theme_location' => 'primary-menu', 'menu' => 'top-navigation', 'container_class' => 'menu', 'menu_class' => '', 'fallback_cb' => '' ) ); ?>
          </div>
    
 

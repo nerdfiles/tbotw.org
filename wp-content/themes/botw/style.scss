@@ -210,7 +210,7 @@ blockquote {
     color: #380785;
     line-height: 1.2;
     &.english {
-      text-transform: uppercase; width: 50px; }
+      text-transform: uppercase; width: 55px; }
     &.spanish {
       font-weight: normal; width: 50px; }
     &.phone {
@@ -392,3 +392,5 @@ body .buttonfixed {
 body.home .buttonfixed { right: 120px !important; }
 
 body .buttonfixed:hover { top: 85px !important; }
+
+body.error-404 #primary-sidebar { display: none; }

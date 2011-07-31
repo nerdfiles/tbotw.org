@@ -1,8 +1,8 @@
 3.1.5 (Brainy Betty)
-e1884f9b3859ae5419a370e96cab4e07623b3256
+da097c89b9a5907b4c9bba7f2ef8bc8d2a3415e6
 o:Sass::Tree::RootNode
 :
-@linei:@template"Ú!/**
+@linei:@template""/**
  * Theme Name: BOTWv1
  * Theme URI: http://thebridgeovertroubledwaters.com
  * Description: For AIR Houston
@@ -214,7 +214,7 @@ blockquote {
     color: #380785;
     line-height: 1.2;
     &.english {
-      text-transform: uppercase; width: 50px; }
+      text-transform: uppercase; width: 55px; }
     &.spanish {
       font-weight: normal; width: 50px; }
     &.phone {
@@ -395,7 +395,9 @@ body .buttonfixed {
   position: absolute; }
 body.home .buttonfixed { right: 120px !important; }
 
-body .buttonfixed:hover { top: 85px !important; }:@options{ :@has_childrenT:@children[;o:Sass::Tree::CommentNode;i:@silent0;@:@lines[ ;
+body .buttonfixed:hover { top: 85px !important; }
+
+body.error-404 #primary-sidebar { display: none; }:@options{ :@has_childrenT:@children[<o:Sass::Tree::CommentNode;i:@silent0;@:@lines[ ;
 [ :
 @loud0:@value"*/**
  * Theme Name: BOTWv1
@@ -671,7 +673,7 @@ color;o;;;;@;"#380785o;;iÓ;;;@;i ;
 [o;;iÕ;;;@;i ;
 [ ;["text-transform;o;;;;@;"uppercaseo;;iÕ;;;@;i ;
 [ ;["
-width;o;;;;@;"	50px;["&.english;o;;iÔ;[o;;[o;;iÔ;[o;$;iÔ;"" o;#;iÔ;["english;"@$;"@$;"@$o;;iÖ;@;	T;i ;
+width;o;;;;@;"	55px;["&.english;o;;iÔ;[o;;[o;;iÔ;[o;$;iÔ;"" o;#;iÔ;["english;"@$;"@$;"@$o;;iÖ;@;	T;i ;
 [o;;i×;;;@;i ;
 [ ;["font-weight;o;;;;@;"normalo;;i×;;;@;i ;
 [ ;["
@@ -911,4 +913,6 @@ right;o;;;;@;"120px !important;["body.home .buttonfixed;o;;iˆ;
 [o;;iŠ;;;@;i ;
 [ ;["top;o;;;;@;"85px !important;["body .buttonfixed:hover;o;;iŠ;[o;;[o;;iŠ;[o; 	;iŠ;["	body;!0;"" ;"@Þo;;iŠ;[o;#;iŠ;["buttonfixed;"@Þo;%
 ;iŠ;;&;'0;["
-hover;"@Þ;"@Þ;"@Þ
+hover;"@Þ;"@Þ;"@Þo;;iŒ;@;	T;i ;
+[o;;iŒ;;;@;i ;
+[ ;["display;o;;;;@;"	none;["$body.error-404 #primary-sidebar;o;;iŒ;[o;;[o;;iŒ;[o; 	;iŒ;["	body;!0;"" o;#;iŒ;["error-404;"@ú;"@úo;;iŒ;[o;3;iŒ;["primary-sidebar;"@ú;"@ú;"@ú
