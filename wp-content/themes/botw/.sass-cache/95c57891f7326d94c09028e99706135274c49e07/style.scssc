@@ -1,8 +1,8 @@
 3.1.5 (Brainy Betty)
-da097c89b9a5907b4c9bba7f2ef8bc8d2a3415e6
+9e1fc484681539d93d99363ad2878558b9f82f63
 o:Sass::Tree::RootNode
 :
-@linei:@template""/**
+@linei:@template"1"/**
  * Theme Name: BOTWv1
  * Theme URI: http://thebridgeovertroubledwaters.com
  * Description: For AIR Houston
@@ -397,7 +397,9 @@ body.home .buttonfixed { right: 120px !important; }
 
 body .buttonfixed:hover { top: 85px !important; }
 
-body.error-404 #primary-sidebar { display: none; }:@options{ :@has_childrenT:@children[<o:Sass::Tree::CommentNode;i:@silent0;@:@lines[ ;
+body.error-404 #primary-sidebar { display: none; }
+
+p.no-events { margin: 15px 0 0; }:@options{ :@has_childrenT:@children[=o:Sass::Tree::CommentNode;i:@silent0;@:@lines[ ;
 [ :
 @loud0:@value"*/**
  * Theme Name: BOTWv1
@@ -915,4 +917,6 @@ right;o;;;;@;"120px !important;["body.home .buttonfixed;o;;iˆ;
 ;iŠ;;&;'0;["
 hover;"@Þ;"@Þ;"@Þo;;iŒ;@;	T;i ;
 [o;;iŒ;;;@;i ;
-[ ;["display;o;;;;@;"	none;["$body.error-404 #primary-sidebar;o;;iŒ;[o;;[o;;iŒ;[o; 	;iŒ;["	body;!0;"" o;#;iŒ;["error-404;"@ú;"@úo;;iŒ;[o;3;iŒ;["primary-sidebar;"@ú;"@ú;"@ú
+[ ;["display;o;;;;@;"	none;["$body.error-404 #primary-sidebar;o;;iŒ;[o;;[o;;iŒ;[o; 	;iŒ;["	body;!0;"" o;#;iŒ;["error-404;"@ú;"@úo;;iŒ;[o;3;iŒ;["primary-sidebar;"@ú;"@ú;"@úo;;iŽ;@;	T;i ;
+[o;;iŽ;;;@;i ;
+[ ;["margin;o;;;;@;"15px 0 0;["p.no-events;o;;iŽ;[o;;[o;;iŽ;[o; 	;iŽ;["p;!0;"" o;#;iŽ;["no-events;"@;"@;"@

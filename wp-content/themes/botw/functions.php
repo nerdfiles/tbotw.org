@@ -17,6 +17,68 @@ $hybrid->init();
 
 /* ======= Kill Hybrid's Douche-y Actions ======= */
 
+add_action( 'after_setup_theme', 'wpse3882_after_setup_theme' );
+function wpse3882_after_setup_theme()
+{
+    add_editor_style();
+}
+
+//add_filter('mce_buttons_2', 'wpse3882_mce_buttons_2');
+function wpse3882_mce_buttons_2($buttons)
+{
+    array_unshift($buttons, 'styleselect');
+    return $buttons;
+}
+
+add_filter('tiny_mce_before_init', 'wpse3882_tiny_mce_before_init');
+function wpse3882_tiny_mce_before_init($settings)
+{
+    /*
+    $settings['theme'] = "advanced";
+    //$settings['plugins'] = "visualchars";
+    $settings['theme_advanced_blockformats'] = 'p,pre,h1,h2,h3,h4,div,blockquote,dt,dd,code,samp';
+    $settings['theme_advanced_buttons1'] = "bold,italic,underline,separator,styleselect,removeformat,cleanup,help,code,hr,formatselect,fontselect,fontsizeselect,sub,sup"; //"separator,insertdate,inserttime,preview,zoom,separator,forecolor,backcolor";
+    $settings['theme_advanced_buttons2'] = "forecolor,backcolor,forecolorpicker,backcolorpicker,charmap,visualaid,anchor,newdocument,blockquote,image,link,unlink,justifyleft,justifycenter,justifyright,justifyfull,bullist,numlist,outdent,indent,cut,copy,paste,undo,redo"; //"bullist,numlist,separator,outdent,indent,separator,undo,redo,separator";
+    $settings['theme_advanced_buttons3'] = "fullpage,fullscreen,advhr,iespell,media,nonbreaking,pagebreak,preview,print,spellchecker"; //"hr,removeformat,visualaid,separator,sub,sup,separator,charmap";
+    
+    $settings['theme_advanced_buttons3_add'] = "visualchars";
+    */
+    
+    // From http://tinymce.moxiecode.com/examples/example_24.php
+    $style_formats = array(
+        //array('title' => 'Bold text', 'inline' => 'b'),
+        //array('title' => 'Red text', 'inline' => 'span', 'styles' => array('color' => '#ff0000')),
+        //array('title' => 'Red header', 'block' => 'h1', 'styles' => array('color' => '#ff0000')),
+        //array('title' => 'Example 1', 'inline' => 'span', 'classes' => 'example1'),
+        //array('title' => 'Example 2', 'inline' => 'span', 'classes' => 'example2'),
+        //array('title' => 'Table styles'),
+        //array('title' => 'Table row 1', 'selector' => 'tr', 'classes' => 'tablerow1'),
+        array('title' => 'HTML5 Semantics'),
+        array('title' => 'aside', 'block' => 'aside', 'classes' => ''),
+        array('title' => 'dialog', 'block' => 'dialog', 'classes' => ''),
+        array('title' => 'figure', 'block' => 'figure', 'classes' => ''),
+        array('title' => 'figcaption', 'block' => 'figcaption', 'classes' => ''),
+        array('title' => 'section', 'block' => 'section', 'classes' => ''),
+        array('title' => 'footer', 'block' => 'footer', 'classes' => ''),
+        array('title' => 'header', 'block' => 'header', 'classes' => ''),
+        array('title' => 'hgroup', 'block' => 'hgroup', 'classes' => ''),
+        array('title' => 'nav', 'block' => 'nav', 'classes' => ''),
+        array('title' => 'article', 'block' => 'article', 'classes' => ''),
+        array('title' => 'HTML5 Multimedia'),
+        array('title' => 'audio', 'block' => 'audio', 'classes' => ''),
+        array('title' => 'video', 'block' => 'video', 'classes' => ''),
+        array('title' => 'List Styles'),
+        array('title' => 'DL', 'block' => 'dl', 'wrapper' => 'dt,dd'),
+        array('title' => '- DT', 'block' => 'dt', 'classes' => 'doctor'),
+        array('title' => '- DD', 'block' => 'dd', 'classes' => 'patient'),
+    );
+    // Before 3.1 you needed a special trick to send this array to the configuration.
+    // See this post history for previous versions.
+    $settings['style_formats'] = json_encode( $style_formats );
+
+    return $settings;
+}
+
 add_action("hybrid_init", "kill_hybrid");
 
 function kill_hybrid() {
@@ -52,6 +114,18 @@ function load_js() {
     
     </script>
 <?php
+}
+
+add_action("init", "kill_stuff", 1);
+
+function kill_stuff() {
+  if (!is_admin()) {
+  wp_deregister_script('l10n');
+  wp_deregister_script('comment-reply');
+  }
+  //<script type='text/javascript' src='http://www.thebridgeovertroubledwaters.org/v2/wp-includes/js/l10n.js?ver=20101110'></script> 
+  //<script type='text/javascript' src='http://www.thebridgeovertroubledwaters.org/v2/wp-includes/js/comment-reply.js?ver=20090102'></script> 
+  
 }
 
 add_action("hybrid_before_html", "skip_links");

@@ -28,6 +28,8 @@
 
 <script src="<?php echo THEMEDIR; ?>/_js-lib/script.js/dist/script.min.js"></script>
 <script>
+  $script('http://www.thebridgeovertroubledwaters.org/v2/wp-includes/js/l10n.js?ver=20101110', 'l10n');
+  $script('http://www.thebridgeovertroubledwaters.org/v2/wp-includes/js/comment-reply.js?ver=20090102', 'comment-reply');
   $script('//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', 'jquery', function() {
     $script('<?php echo THEMEDIR; ?>/_js/global.js', 'global');
   });
