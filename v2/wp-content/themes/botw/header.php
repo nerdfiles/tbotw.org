@@ -111,7 +111,11 @@ if($post->post_parent) {
         echo "grid_12";
     else :
        if ($pages) :
-           echo "grid_9";
+          if(is_category()) {
+            echo "grid_12";
+          } else {
+            echo "grid_9";
+          }
        else :
            echo "grid_12";
        endif;
