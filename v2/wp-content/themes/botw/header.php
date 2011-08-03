@@ -9,11 +9,14 @@
  *
  * @package Hybrid
  * @subpackage Template
- */?>
+ */ ?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+<meta charset="utf-8" />
 <title><?php hybrid_document_title(); ?></title>
+<link href='http://fonts.googleapis.com/css?family=Merriweather:400,700&v2' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans&v2' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="<?php echo THEMEDIR; ?>/_css-lib/960gs/code/css/reset.css" media="all" />
 <link rel="stylesheet" type="text/css" href="<?php echo THEMEDIR; ?>/_css-lib/960gs/code/css/text.css" media="all" />
 <link rel="stylesheet" type="text/css" href="<?php echo THEMEDIR; ?>/_css-lib/960gs/code/css/960.css" media="all" />
@@ -23,9 +26,22 @@
 <?php hybrid_head(); // Hybrid head hook ?>
 <?php wp_head(); // WP head hook ?>
 
-</head>
+<script src="<?php echo THEMEDIR; ?>/_js-lib/script.js/dist/script.min.js"></script>
+<script>
+  $script('http://www.thebridgeovertroubledwaters.org/v2/wp-includes/js/l10n.js?ver=20101110', 'l10n');
+  $script('http://www.thebridgeovertroubledwaters.org/v2/wp-includes/js/comment-reply.js?ver=20090102', 'comment-reply');
+  $script('//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', 'jquery', function() {
+    $script('<?php echo THEMEDIR; ?>/_js/global.js', 'global');
+  });
+</script>
 
-<body class="<?php hybrid_body_class(); ?>">
+</head>
+<?php
+if($post->post_parent) {
+  $hasparent = ' has-parent';
+}
+?>
+<body class="<?php hybrid_body_class(); echo $hasparent; ?>">
 
 <div id="page-background"></div>
 
@@ -69,7 +85,7 @@
         </div>
             
          <div id="top-nav" class="grid_10 omega">
-		 <?php wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container_class' => 'menu', 'menu_class' => '', 'fallback_cb' => '' ) ); ?>
+		 <?php wp_nav_menu( array( 'menu' => 'top-navigation', 'container_class' => 'menu', 'menu_class' => '', 'fallback_cb' => '' ) ); ?>
          </div>
    
 

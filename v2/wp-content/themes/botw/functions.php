@@ -5,7 +5,7 @@
  * should create a child theme and make changes to its functions.php file (not this one).
  *
  * @package Hybrid
- * @subpackage Functions
+ * @subpackage Function
  */
 
 /* Load the Hybrid class. */
@@ -17,7 +17,7 @@ $hybrid->init();
 
 /* ======= Kill Hybrid's Douche-y Actions ======= */
 
-add_action("hybrid_init", "kill_hybrid");
+add_action("hybrid_init", "kill_hybrid",1);
 
 function kill_hybrid() {
     remove_action("hybrid_header", "hybrid_site_title");
@@ -37,7 +37,6 @@ add_action('hybrid_after_html', 'load_js', 11);
 
 function load_js() {
 ?>
-    <script data-main="global" type="text/javascript" src="<?php echo THEMEDIR; ?>/_js/require-jquery-1.4.4.js"></script>
     <script type="text/javascript">
     
       var _gaq = _gaq || [];
@@ -52,6 +51,19 @@ function load_js() {
     
     </script>
 <?php
+}
+
+add_action("init", "kill_stuff", 1);
+
+function kill_stuff() {
+  if (!is_admin()) {
+  wp_deregister_script('l10n');
+  wp_deregister_script('comment-reply');
+  wp_deregister_script('jquery');
+  }
+  //<script type='text/javascript' src='http://www.thebridgeovertroubledwaters.org/v2/wp-includes/js/l10n.js?ver=20101110'></script> 
+  //<script type='text/javascript' src='http://www.thebridgeovertroubledwaters.org/v2/wp-includes/js/comment-reply.js?ver=20090102'></script> 
+  
 }
 
 add_action("hybrid_before_html", "skip_links");
@@ -107,8 +119,8 @@ function page_hero() {
     if (!is_page("Landing Page")) {
     ?>
     <div id="page-hero" class="grid_16" class="cushycms-wysiwyg" title="Site-wide Hotline">
-        <a href="http://www.unitedwayhouston.org/">
-            <img style="-webkit-box-shadow: 0 0 5px #333; position: absolute; right: 2.3em; bottom: .5em;" src="http://www.thebridgeovertroubledwaters.org/v2/wp-content/themes/botw/_img/united_way_logo.gif" alt="United Way of Greater Houston" width="96" height="60" class="" title="United Way of Greater Houston" />
+        <a href="http://www.unitedwayhouston.org/" class="uw-logo">
+            <img src="http://www.thebridgeovertroubledwaters.org/v2/wp-content/themes/botw/_img/united_way_logo.gif" alt="United Way of Greater Houston" width="96" height="60" class="" title="United Way of Greater Houston" />
         </a>
         <?php
             include_once("static-content/site-wide-hotline.html");

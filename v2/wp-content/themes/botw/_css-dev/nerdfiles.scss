@@ -1,11 +1,13 @@
 /* ======= Grid ======= */
+
 #container-page {
   /*background: url(../_css-lib/960gs/code/img/16_col-trans.gif) center repeat-y;*/ }
 
 /* ======= Elements ======= */
+
 body {
   background: #f2f2e9 url(../_img-ui/sandstone_bg.gif);
-  font: 75%/1.65 "Quattrocento Sans", "Helvetica Neue", "Helvetica", Arial, "Liberation Sans", FreeSans, sans-serif; }
+  font: 75% / 1.65 "Quattrocento Sans", "Helvetica Neue", "Helvetica", Arial, "Liberation Sans", FreeSans, sans-serif; }
 
 input.submit {
   padding: 5px;
@@ -19,6 +21,7 @@ input.submit {
   border-radius: 4px; }
 
 /* ======= Utility Classes ======= */
+
 .hide {
   display: none; }
 
@@ -26,6 +29,7 @@ input.submit {
   display: block; }
 
 /* ======= Page Hero ======= */
+
 #page-hero {
   height: 150px;
   /*width: 100%;*/
@@ -33,36 +37,34 @@ input.submit {
   position: relative;
   margin-top: -75px;
   margin-bottom: 20px;
-  -moz-box-shadow: 0 0 0.5em rgba(50, 50, 50, 0.7);
-  -webkit-box-shadow: 0 0 0.5em rgba(50, 50, 50, 0.7);
-  box-shadow: 0 0 0.5em rgba(50, 50, 50, 0.7); }
-  #page-hero .uw-logo {
-    -webkit-box-shadow: 0 0 5px #333;
-    position: absolute;
-    right: 8px;
-    bottom: 8px; }
-    #page-hero .uw-logo img {
-      display: block; }
+  -moz-box-shadow: 0 0 .5em rgba(50,50,50,.7); 
+  -webkit-box-shadow: 0 0 .5em rgba(50,50,50,.7); 
+  box-shadow: 0 0 .5em rgba(50,50,50,.7); 
+  
+  .uw-logo { -webkit-box-shadow: 0 0 5px #333; position: absolute; right: 8px; bottom: 8px;
+    img { display: block; } } }
 
-body.page-97 #page-hero {
-  background-image: url("../_img/support_donate_hero.jpg"); }
-body.page-69 #page-hero {
-  background-image: url("../_img/partners_hero.jpg"); }
-body.page-10 #page-hero {
-  background-image: url("../_img/resources_hero.jpg"); }
-body.archive #page-hero {
-  background-image: url("../_img/past_events_hero.jpg"); }
-body.page-12 #page-hero {
-  background-image: url("../_img/our_new_center_hero.jpg"); }
-body.page-14 #page-hero {
-  background-image: url("../_img/faqs_hero.jpg"); }
-body.page-8 #page-hero {
-  background-image: url("../_img/about_us_hero.jpg"); }
-body.page-template-default #main-content {
-  top: 0;
-  margin-bottom: 25px; }
+body {
+  &.page-97 #page-hero {
+    background-image: url("../_img/support_donate_hero.jpg"); }
+  &.page-69 #page-hero {
+    background-image: url("../_img/partners_hero.jpg"); }
+  &.page-10 #page-hero {
+    background-image: url("../_img/resources_hero.jpg"); }
+  &.archive #page-hero {
+    background-image: url("../_img/past_events_hero.jpg"); }
+  &.page-12 #page-hero {
+    background-image: url("../_img/our_new_center_hero.jpg"); }
+  &.page-14 #page-hero {
+    background-image: url("../_img/faqs_hero.jpg"); }
+  &.page-8 #page-hero {
+    background-image: url("../_img/about_us_hero.jpg"); }
+  &.page-template-default #main-content {
+    top: 0;
+    margin-bottom: 25px; } }
 
 /* ======= Subnav ======= */
+
 #subnav {
   position: relative;
   top: 0;
@@ -73,88 +75,89 @@ body.page-template-default #main-content {
 #subnav-inner {
   background: url(../_img-ui/sub_nav_bg_middle.png) repeat-y; }
 
-body.has-parent #subnav li.page_item a {
-  opacity: .7;
-  color: #777; }
+body.has-parent #subnav li.page_item a { opacity: .7; color: #777; }
+body.singular-page #subnav ul li.current_page_item a { opacity: 1; color: #630077; }
 
-body.singular-page #subnav ul li.current_page_item a {
-  opacity: 1;
-  color: #630077; }
-
-#subnav ul {
-  margin: 0;
-  background: url(../_img-ui/sub_nav_bg_bottom.png) 0 bottom no-repeat;
-  min-height: 99px;
-  height: auto !important;
-  height: 99px;
-  padding-bottom: 10px; }
-#subnav .page_item {
-  list-style: none;
-  margin: 0; }
-#subnav a {
-  color: #630077;
-  display: block;
-  text-decoration: none;
-  padding: 5px 10px;
-  font-size: 1.3em; }
-  #subnav a:link {
+#subnav {
+  ul {
+    margin: 0;
+    background: url(../_img-ui/sub_nav_bg_bottom.png) 0 bottom no-repeat;
+    min-height: 99px;
+    height: auto !important;
+    height: 99px;
+    padding-bottom: 10px; }
+  .page_item {
+    list-style: none;
+    margin: 0; }
+  a {
+    color: #630077;
     display: block;
     text-decoration: none;
     padding: 5px 10px;
     font-size: 1.3em;
-    color: #630077; }
-  #subnav a:visited {
-    text-decoration: none;
-    color: #630077; }
-  #subnav a:hover {
-    text-decoration: underline;
-    color: #000; }
+    &:link {
+      display: block;
+      text-decoration: none;
+      padding: 5px 10px;
+      font-size: 1.3em;
+      color: #630077; }
+    &:visited {
+      text-decoration: none;
+      color: #630077; }
+    &:hover {
+      text-decoration: underline;
+      color: #000; }
+    &:active {} } }
 
 /* ======= Primary Sidebar ======= */
+
 #primary-sidebar {
   position: relative;
   top: 0;
   margin-bottom: 20px; }
 
 /* ======= Footer ======= */
+
 #footer-container-inner {
   background: #595959 url(../_img-ui/footer_edge.gif) 0 0 repeat-x; }
 
 #footer {
   color: #fff;
   padding-top: 30px;
-  font-size: .9em; }
-  #footer a {
+  font-size: .9em;
+  a {
     color: #fff;
     text-decoration: none;
-    display: block; }
-    #footer a:link {
+    display: block;
+    &:link {
       color: #fff;
       text-decoration: none;
       display: block; }
-    #footer a:visited {
+    &:visited {
       color: #fff; }
-    #footer a:hover {
+    &:hover {
       text-decoration: underline; }
-    #footer a:active {
+    &:active {
       background: #fff;
       color: #333;
-      text-decoration: none; }
+      text-decoration: none; } } }
 
 #affiliates li {
   float: left;
   margin-left: 15px; }
 
 /* ======= Footer Contact Info ======= */
+
 #footer-contact-info h4 {
   height: 42px;
   width: 120px;
   background: url(../_img/botw_logo_small.png) no-repeat; }
 
 /* ======= Footer Links ======= */
+
 #footer-links {
-  font-size: .9em; }
-  #footer-links h4 {
+  font-size: .9em;
+  h4 {
     margin: 0 0 .5em 0;
     font-size: 1.35em;
     font-weight: normal;
@@ -165,15 +168,17 @@ body.singular-page #subnav ul li.current_page_item a {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    */ }
-    #footer-links h4 a {
-      font-family: Georgia, "Times New Roman", Times, serif; }
-  #footer-links li {
+    */
+    a {
+      font-family: Georgia, "Times New Roman", Times, serif; } }
+  li {
     list-style: none;
-    margin-bottom: .5em; }
+    margin-bottom: .5em; } }
 
 /* ======= Vertical Controls ======= */
+
 /* Attic */
+
 .attic_1 {
   margin-top: 5px; }
 
@@ -205,6 +210,7 @@ body.singular-page #subnav ul li.current_page_item a {
   margin-top: 50px; }
 
 /* Basement */
+
 .basement_1 {
   margin-bottom: 5px; }
 
@@ -236,6 +242,7 @@ body.singular-page #subnav ul li.current_page_item a {
   margin-bottom: 50px; }
 
 /* Ceiling */
+
 .ceiling_1 {
   padding-top: 5px; }
 
@@ -267,6 +274,7 @@ body.singular-page #subnav ul li.current_page_item a {
   padding-top: 50px; }
 
 /* Floor */
+
 .floor_1 {
   padding-bottom: 5px; }
 
@@ -298,6 +306,7 @@ body.singular-page #subnav ul li.current_page_item a {
   padding-bottom: 50px; }
 
 /* Lift */
+
 .lift_1 {
   margin-top: -5px; }
 
@@ -329,6 +338,7 @@ body.singular-page #subnav ul li.current_page_item a {
   margin-top: -50px; }
 
 /* Drop */
+
 .drop_1 {
   margin-bottom: -5px; }
 
@@ -360,7 +370,9 @@ body.singular-page #subnav ul li.current_page_item a {
   margin-bottom: -50px; }
 
 /* ======= Horizontal Controls (Micro-level) ======= */
+
 /* Tug: Pulling an Element [from] the Left Some */
+
 .tug_1 {
   margin-left: -5px; }
 
@@ -392,6 +404,7 @@ body.singular-page #subnav ul li.current_page_item a {
   margin-left: -50px; }
 
 /* Nudge: Pushing an Element [from] the Left Some */
+
 .nudge_1 {
   margin-left: 5px; }
 
@@ -423,6 +436,7 @@ body.singular-page #subnav ul li.current_page_item a {
   margin-left: 50px; }
 
 /* Shove: Element Pushing Right Some */
+
 .shove_1 {
   margin-right: 5px; }
 
@@ -454,6 +468,7 @@ body.singular-page #subnav ul li.current_page_item a {
   margin-right: 50px; }
 
 /* Tow: Pulling an Element [from] the Right Some */
+
 .tow_1 {
   margin-right: -5px; }
 
@@ -485,7 +500,9 @@ body.singular-page #subnav ul li.current_page_item a {
   margin-right: -50px; }
 
 /* ======= Lining Controls ======= */
+
 /* Bulwark Bastions Bellowed Bastardly Bison */
+
 .bulwark_1 {
   padding: 5px; }
 
@@ -502,6 +519,7 @@ body.singular-page #subnav ul li.current_page_item a {
   padding: 25px; }
 
 /* Shouldering Our Adjacent Cousins */
+
 .shoulder_1 {
   padding: 0 5px; }
 
@@ -518,10 +536,12 @@ body.singular-page #subnav ul li.current_page_item a {
   padding: 0 25px; }
 
 /* ======= List Classes ======= */
+
 ul.inline li, ol.inline li {
   display: inline; }
 
 /* ======= GTFO Classes ======= */
+
 .no_list_style {
   list-style: none; }
 
@@ -529,6 +549,7 @@ ul.inline li, ol.inline li {
   margin: 0; }
 
 /* Don't write more CSS to nullify inheritance. */
+
 .no_margin_top {
   margin-top: 0; }
 
@@ -542,6 +563,7 @@ ul.inline li, ol.inline li {
   margin-left: 0; }
 
 /* Don't write more CSS to nullify inheritance. */
+
 .no_padding {
   padding: 0; }
 
@@ -558,7 +580,12 @@ ul.inline li, ol.inline li {
   padding-left: 0; }
 
 /* ======= Page Separators ======= */
+
+hr {
+  &.page_spacer, &.page_separator_1, &.page_separator_2, &.page_separator_3 {} }
+
 /* ======= Floating / Clearing ======= */
+
 .float-left, .alignleft {
   float: left; }
 
@@ -578,22 +605,27 @@ ul.inline li, ol.inline li {
   clear: right; }
 
 /* For modern browsers */
-.clear-fix:before, .clear-fix:after {
-  content: "";
-  display: table; }
 
-ol.comment-list .comment:before, ol.comment-list .comment:after {
-  content: "";
-  display: table; }
+.clear-fix {
+  &:before, &:after {
+    content: "";
+    display: table; } }
+
+ol.comment-list .comment {
+  &:before, &:after {
+    content: "";
+    display: table; } }
 
 .clear-fix:after, ol.comment-list .comment:after {
   clear: both; }
 
 /* For IE 6/7 (trigger hasLayout) */
+
 .clear-fix, ol.comment-list .comment {
   zoom: 1; }
 
 /* ======= Mystery! ======= */
+
 .bleach {
   display: none !important; }
 
@@ -607,6 +639,7 @@ ol.comment-list .comment:before, ol.comment-list .comment:after {
   text-indent: -9999px; }
 
 /* apply to block-level elems */
+
 .position_zap {
   position: absolute;
   left: -9999px; }

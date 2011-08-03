@@ -53,14 +53,22 @@ get_header(); ?>
             <?php
             $args = array( 'numberposts' => 3, 'category_name' => 'Events', 'orderby' => 'date' );
             $postslist = get_posts( $args );
+            
+            if ( $postslist ) {
             foreach ($postslist as $post) :  setup_postdata($post); ?> 
-    			<div class="event clear-all">
-                    <h3><?php echo get_the_title(); ?></h3>
-                    <div class="date"><?php echo get_the_date("M\. j"); ?></div>
-                    <div><?php the_excerpt(); ?></div>
-                    <a href="<?php the_permalink(); ?>" title="View Event Info">Read more »</a>
-                </div>
-            <?php endforeach; ?>
+              <div class="event clear-all">
+                  <h3><?php echo get_the_title(); ?></h3>
+                  <div class="date"><?php echo get_the_date("M\. j"); ?></div>
+                  <div><?php the_excerpt(); ?></div>
+                  <a href="<?php the_permalink(); ?>" title="View Event Info">Read more »</a>
+              </div>
+            <?php endforeach; 
+            } else { 
+              ?>
+              <p class="no-events">There are currently no upcoming events.</p>
+              <?php
+            }
+            ?>
          </div>
     </div>
     <div id="call-to-action-pods" class="grid_16 alpha omega">
@@ -87,7 +95,7 @@ get_header(); ?>
     </div>
 <!-- End Hardcoded Template -->
 
-				<?php //hybrid_after_entry(); // After entry hook ?>
+				<?php hybrid_after_entry(); // After entry hook ?>
 
 			<?php hybrid_after_singular(); // After singular hook ?>
 

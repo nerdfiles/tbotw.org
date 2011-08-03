@@ -22,13 +22,17 @@ get_header(); ?>
 
 		<?php if ( is_active_sidebar( 'utility-404' ) ) : ?>
 
-        <?php dynamic_sidebar( 'utility-404' ); ?>
+        <?php //dynamic_sidebar( 'utility-404' ); ?>
 
 		<?php else: ?>
 
-			<?php hybrid_entry_class(); ?>
+			<div class="<?php hybrid_entry_class(); ?>">
 
-					<?php get_search_form(); ?>
+          <h1>404</h1>
+          
+          <p>The page you are looking for could not be found.</p>
+		  
+		  </div>
 					
 		<?php endif; ?>
 
